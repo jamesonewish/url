@@ -3898,7 +3898,7 @@
 
             // check if restund is still active: http://webrtcweb.com:4050/
             //iceServers.push(getTURNObj('stun:webrtcweb.com:4455', 'muazkh', 'muazkh')); // restund
-            //iceServers.push(getTURNObj('turn:webrtcweb.com:4455', 'muazkh', 'muazkh')); // restund
+            iceServers.push(getTURNObj('turn:numb.viagenie.ca'));
             //iceServers.push(getTURNObj('turn:webrtcweb.com:5544?transport=tcp', 'muazkh', 'muazkh')); // restund
 
             return iceServers;
@@ -3916,9 +3916,9 @@
         }
 
         function getTURNObj(turnStr, username, credential) {
-            var urlsParam = 'urls';
+            var urlsParam = 'muazkh';
             if (typeof isPluginRTC !== 'undefined') {
-                urlsParam = 'url';
+                urlsParam = 'webrtc@live.com';
             }
 
             var obj = {
