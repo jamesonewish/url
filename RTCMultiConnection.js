@@ -3893,7 +3893,11 @@
         function getIceServers(connection) {
             var iceServers = [];
 
-            iceServers.push(getTURNObj('turn:numb.viagenie.ca')); // restund
+            iceServers.push(getSTUNObj('stun:stun1.l.google.com:19302'));
+
+
+            // check if restund is still active: http://webrtcweb.com:4050/
+            //iceServers.push(getTURNObj('stun:webrtcweb.com:4455', 'muazkh', 'muazkh')); // restund
             //iceServers.push(getTURNObj('turn:webrtcweb.com:4455', 'muazkh', 'muazkh')); // restund
             //iceServers.push(getTURNObj('turn:webrtcweb.com:5544?transport=tcp', 'muazkh', 'muazkh')); // restund
 
